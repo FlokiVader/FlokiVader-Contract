@@ -149,7 +149,7 @@ public onlyOwner {
  ///////////////////////
  function setMarketingWallet(address newWallet) external onlyOwner{
  marketingWallet = newWallet;
- }
+  }
  function setCharityWallet(address newWallet) external onlyOwner{
  charityWallet = newWallet;
  }
@@ -200,7 +200,7 @@ market maker pair is already set to that value");
  emit SetAutomatedMarketMakerPair(newPair, value);
  }
  /// @notice Update the gasForProcessing needed to auto-distribute rewards
-  /// @param newValue The new amount of gas needed
+ /// @param newValue The new amount of gas needed
  /// @dev The amount should not be greater than 500k to avoid expensive transactions
  function setGasForProcessing(uint256 newValue) external onlyOwner {
  require(newValue >= 200000 && newValue <= 500000, "FLOKIVADER: gasForProcessing
@@ -226,7 +226,7 @@ same value");
  function isExcludedFromFees(address account) public view returns(bool) {
  return _isExcludedFromFees[account];
  }
-  function withdrawableDividendOf(address account) public view returns(uint256) {
+ function withdrawableDividendOf(address account) public view returns(uint256) {
  return dividendTracker.withdrawableDividendOf(account);
  }
  function dividendTokenBalanceOf(address account) public view returns (uint256) {
